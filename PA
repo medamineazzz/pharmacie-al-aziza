@@ -1,6 +1,30 @@
-index.html
-reserve.html
-style.css
-medicines.js
-app.js
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pharmacie Al Aziza | Fès</title>
+  <meta name="description" content="Pharmacie Al Aziza à Fès. Réservez vos médicaments avant d’arriver.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+  <h1>Pharmacie Al Aziza</h1>
+  <p>Fès — Réservez vos médicaments avant d’arriver</p>
+</header>
+
+<section class="search">
+  <input type="text" id="searchInput" placeholder="Rechercher un médicament…">
+</section>
+
+<section id="medicineList" class="medicines"></section>
+
+<footer>
+  <p>© 2026 Pharmacie Al Aziza – Fès</p>
+</footer>
+
+<script src="medicines.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
