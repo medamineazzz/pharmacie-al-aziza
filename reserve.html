@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Réservation | Pharmacie Al Aziza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Réserver un médicament</h1>
+</header>
+
+<form
+  class="form"
+  action="https://formsubmit.co/VOTRE_EMAIL@gmail.com"
+  method="POST"
+>
+
+  <input type="hidden" name="_subject" value="Nouvelle réservation – Pharmacie Al Aziza">
+  <input type="hidden" name="_captcha" value="false">
+
+  <label>Nom complet</label>
+  <input type="text" name="Nom" required>
+
+  <label>Téléphone</label>
+  <input type="text" name="Téléphone" required>
+
+  <label>Médicament</label>
+  <input type="text" id="medicineField" name="Médicament" readonly>
+
+  <label>Heure d’arrivée prévue</label>
+  <input type="time" name="Heure d’arrivée" required>
+
+  <button type="submit">Confirmer la réservation</button>
+</form>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const medicine = params.get("medicine");
+  document.getElementById("medicineField").value = medicine || "";
+</script>
+
+</body>
+</html>
